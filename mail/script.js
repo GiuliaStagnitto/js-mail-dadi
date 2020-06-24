@@ -4,13 +4,20 @@ console.log(mail);
 document.getElementById('cerca').addEventListener("click", function(){
 
   var utente = prompt("Inserisci la tua mail");
+  var trovato = false;
 
-  for (var utente = 0; utente < mail.length; utente++) {
-    if (utente = mail) {
+  for (var i = 0; i < mail.length; i++) {
+    if (utente === mail[i]) {
+      trovato = true;
+    }
+
+    if (trovato) {
       console.log("la tua mail è nel database");
-    } else if (utente |= mail) {
+    } else {
       console.log("la mail inserita non è tra quelle nel database");
     }
+    
+
   }
 
 });
